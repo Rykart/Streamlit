@@ -67,11 +67,11 @@ if(sidebar_option == 'Data info'):
     
 if(sidebar_option == 'First analysis'):
     st.title('First Analysis')
-    st.write('The analysis of the graph shows clear differences in CO2 emissions from industrial activities relative to GDP across major global economies over the past 30 years. China currently exhibits the highest emissions per unit of economic output, followed by India. In contrast, the EU and the USA demonstrate significantly lower emission intensities, with the global average falling in between.')
+    st.write('This analysis shows clear differences in CO2 emissions from industrial activities relative to GDP across major global economies over the past 30 years. China currently exhibits the highest emissions per unit of economic output, followed by India. In contrast, the EU and the USA demonstrate significantly lower emission intensities, with the global average falling in between.')
     
     # data retreival
 
-    df = pd.read_excel(r"C:\Users\WINASUS\Documents\CMCC\Python\Input_data.xlsx")  # Sostituisci col path corretto
+    df = pd.read_excel(r"Input_data.xlsx")  # Sostituisci col path corretto
     df.rename(columns = {'Year': 'year',
                          'Country Name': 'country'}, inplace = True)
     df['year'] = pd.to_numeric(df['year'], errors='coerce')
@@ -143,7 +143,7 @@ if(sidebar_option == 'Second analysis'):
             ''')
    
     
-    df = pd.read_excel(r"C:\Users\WINASUS\Documents\CMCC\Python\Input_data.xlsx")  # Sostituisci col path corretto
+    df = pd.read_excel(r"Input_data.xlsx")  # Sostituisci col path corretto
     df.rename(columns = {'Year': 'year',
                          'Country Name': 'country',
                          'Emissions': 'emissions',
